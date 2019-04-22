@@ -21,6 +21,12 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Hassium.ogg
 
+# Lawnchair
+PRODUCT_PACKAGES += Lawnchair
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/lineage/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
+
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # Thank you, please drive thru!
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.dun.override=0
